@@ -20,7 +20,6 @@ class ApiAuthenticate
                 'message' => 'Missing token',
             ], 401);
         }
-
         $tokenValue = substr($authHeader, 7);
 
         if (!str_contains($tokenValue, '|')) {

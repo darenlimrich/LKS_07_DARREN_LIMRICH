@@ -242,8 +242,10 @@ class GameController extends Controller
             ]
         );
 
-        if ($request->filled('title'))       $game->title       = $request->title;
-        if ($request->filled('description')) $game->description = $request->description;
+        if ($request->filled('title'))       
+            $game->title       = $request->title;
+        if ($request->filled('description')) 
+            $game->description = $request->description;
         $game->save();
 
         return response()->json([
